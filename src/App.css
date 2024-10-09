@@ -1,38 +1,424 @@
-.App {
+
+/* Global Section Styling */
+section {
+  padding: 50px;
+  position: relative;
+}
+
+/* Alternating Background Colors */
+.section-yellow {
+  background: linear-gradient(90deg, yellow 50%, white 50%);
+}
+
+.section-white {
+  background: linear-gradient(90deg, white 50%, yellow 50%);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(90deg, yellow 50%, white 50%), url('../public/Alabay-Assets/home-image.png');
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: #fff;
+  position: relative;
+  height: 100vh;
+}
+
+.hero-section .overlay {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero-description {
+  text-align: center;
+  max-width: 900px;
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.6);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.highlight {
+  color: #f39c12;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.highlight-join {
+  color: #3498db;
+}
+
+/* History Section */
+.history-section {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(90deg, yellow 50%, white 50%);
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+
+.text-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.history-title {
+  font-size: 2.8rem;
+  color: #333;
+}
+
+.history-description {
+  font-size: 1.3rem;
+  color: #555;
+}
+
+.image-section img {
+  width: 500px;
+  height: auto;
+}
+
+/* Project Mission Section */
+.mission-section {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(90deg, white 50%, yellow 50%);
+}
+
+.mission-title {
+  font-size: 2.8rem;
+  color: #333;
+}
+
+.mission-description {
+  font-size: 1.3rem;
+  color: #555;
+}
+
+/* Roadmap Section */
+.roadmap-section {
+  background: linear-gradient(90deg, yellow 50%, white 50%);
+  text-align: center;
+  padding: 50px 0;
+}
+
+.roadmap-header h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.roadmap-content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.roadmap-stage {
+  width: 200px;
+  margin: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.roadmap-image {
+  width: 20%;
+}
+
+.roadmap-stage img {
+  width: 120px;
+  height: auto;
+}
+
+.roadmap-stage h3 {
+  font-size: 1.7rem;
+  margin-top: 10px;
+}
+
+.roadmap-stage p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Merchandise Section */
+.merchandise-section {
+  background: linear-gradient(90deg, yellow 50%, white 50%);
+  text-align: center;
+}
+
+.merchandise-content {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.merchandise-item img {
+  width: 550px;
+  height: auto;
+  margin: 0 20px;
+}
+
+.arrow-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* Game Preview Section */
+.game-preview-section {
+  background: linear-gradient(90deg, white 50%, yellow 50%);
+  text-align: center;
+}
+
+.game-previews {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.game-card img {
+  width: 250px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.game-card img:hover {
+  transform: scale(1.1);
+}
+
+.game-card h3 {
+  font-size: 1.7rem;
+  margin-top: 10px;
+}
+
+.game-card p {
+  font-size: 1.2rem;
+}
+
+/* Social Media Section */
+.social-media-section {
+  background: linear-gradient(90deg, yellow 50%, rgb(25, 211, 218) 50%);
+  text-align: center;
+}
+
+.social-media-links a img {
+  width: 60px;
+  margin: 10px;
+}
+
+.social-media-links-image {
+  width: 20%;
+}
+
+/* Game Zone */
+.game-zone {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+.game-zone h2,
+.game-zone p,
+.action-buttons {
+  position: relative;
+  z-index: 1;
+  font-size: larger;
+}
+
+.game-zone img {
+  width: 80%;
+}
+
+.game-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.coming-soon-btn,
+.exit-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.coming-soon-btn {
+  background-color: #6c63ff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.exit-btn {
+  background-color: #ff4d4d;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Discover Button */
+.discover-btn {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 200px;
+}
+
+.discover-btn:hover {
+  background-color: #ff3333;
+  transform: translateX(-50%) scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* Discover Page */
+.discover-page {
+  text-align: center;
+  padding: 50px;
+  color: white;
+  background-color: #000;
+}
+
+.features-section {
+  margin: 20px;
+  padding: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.coming-soon-btn,
+.exit-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.coming-soon-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.exit-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.game-background {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Tokenomics Section */
+.tokenomics-section {
+  background: linear-gradient(90deg, white 50%, yellow 50%);
+  text-align: center;
+  padding: 50px 0;
+}
+
+.tokenomics-header h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.tokenomics-content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.tokenomics-stage {
+  width: 200px;
+  margin: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tokenomics-stage img {
+  width: 10px;
+  height: auto;
+}
+
+.tokenomics-image {
+  width: 20%;
+}
+
+.tokenomics-stage h3 {
+  font-size: 1.7rem;
+  margin-top: 10px;
+}
+
+.tokenomics-stage p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .discover-btn {
+    width: 150px;
+    font-size: 16px;
+    padding: 10px 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .game-background {
+    width: 100%;
+    height: auto;
   }
+
+  .roadmap-stage,
+  .tokenomics-stage {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+.action-buttons button {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.action-buttons button:hover {
+  transform: translateY(-3px
+
+);
 }
